@@ -1,13 +1,8 @@
-// for cleaner, readable code. instead of writing everything out on php file
-
-<h1>$title</h1>
-<section>
-    <?php
-        forEach($array as $key=>$value){
-            ?>
-            <div><?=$value['name'];?></div><div><?=$value['occupation'];?></div>
-            <?php
-        }
+<?php
+    $title = $xml->entry[$i]->title;
+    $videoId = $xml->entry[$i]->id;
+    $videoId = str_replace('yt:video:', '', $videoId);
+    $media = $xml->entry[$i]->children('http://search.yahoo.com/mrss/');
+    $description = $media->group->description;
+    $description = substr($description, 0, strrpos($description, 'SUBSCRIBE'));
 ?>
-</section>
-<footer>$someData</footer>
