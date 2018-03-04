@@ -28,6 +28,9 @@ $channel = $xml->title;
 $address = $xml->author->uri;
 $header = "<h1>YouTube Channel: <a href='$address'>$channel</a></h1>";
 
+?>
+<h1>YouTube Channel: <a href='$address'><?=$channel?></a></h1>
+<?php
 for($i=0; $i<10; $i++){
     $title = $xml->entry[$i]->title;
     // include('template.php');
@@ -36,11 +39,15 @@ for($i=0; $i<10; $i++){
     $media = $xml->entry[$i]->children('http://search.yahoo.com/mrss/');
     $description = $media->group->description;
     $description = substr($description, 0, strrpos($description, 'SUBSCRIBE'));
-    $html .= "<h3>$title</h3>
-    <br><iframe width='560' height='315' src='https://www.youtube.com/embed/$videoId' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>
-    <br>$description<hr>";
+    // $html .= "<h3>$title</h3>
+    // <br><iframe width='560' height='315' src='https://www.youtube.com/embed/$videoId' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>
+    // <br>$description<hr>";
+    ?><h3><?=$title?></h3>
+        <br><iframe width='560' height='315' src='https://www.youtube.com/embed/<?=$videoId?>' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>
+        <br><?=$description?><hr><?php
 }
-echo $header.$html
+// echo $html
 ?>
+
 </body>
 </html>
