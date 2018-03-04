@@ -5,4 +5,8 @@
     $media = $xml->entry[$i]->children('http://search.yahoo.com/mrss/');
     $description = $media->group->description;
     $description = substr($description, 0, strrpos($description, 'SUBSCRIBE'));
+
+    if(!$description){
+        $description = 'No Description Found';
+    }
 ?>
