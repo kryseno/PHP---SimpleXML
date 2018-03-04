@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Montserrat, sans-serif;
+        }
+    </style>
+</head>
+<body>
 <?php
 
 //*******************//
@@ -32,3 +42,5 @@ for($i=0; $i<10; $i++){
 }
 echo $header.$html
 ?>
+</body>
+</html>
