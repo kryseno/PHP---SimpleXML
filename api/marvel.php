@@ -1,6 +1,7 @@
 <?php
 
-$url = "https://gateway.marvel.com:443/v1/public/characters?apikey=6e9af333fe9d6fd94c038d17f4bea675";
+$hash = hash('md5', 'marvel');
+$url = "https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=6e9af333fe9d6fd94c038d17f4bea675&hash=" . $hash;
 
 $ch = curl_init();
 
