@@ -40,14 +40,14 @@ for($i=0; $i<12; $i++){
         <table class="table table-dark">
         <thead>
             <tr>
-                <th scope="col"></th>
+                <th scope="col">Video</th>
                 <th scope="col">Title</th>
                 <th scope="col">Description</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th scope="row"><? echo $i + 1?></th>
+                <th scope="row"><a href="https://www.youtube.com/embed/<?=$videoId?>"><? echo $i + 1?></a></th>
                 <td><?=$title?></td>
                 <td><?=$description?></td>
             </tr>
