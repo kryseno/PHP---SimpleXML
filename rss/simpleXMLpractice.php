@@ -29,11 +29,14 @@ include('request.php');
 for($i=0; $i<12; $i++){
     include('template.php');
 ?>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 videos">
+        <!-- USING BOOTSTRAP CLASSES -->
+        <!-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 videos">
             <h3><?=$title?></h3>
             <br><iframe width='540' height='295' src='https://www.youtube.com/embed/<?=$videoId?>' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>
             <br><span id="description"><?=$description?></span>
-        </div>
+        </div> -->
+
+        <!-- USING BOOTSTRAP TABLES -->
     
 <?php
 }
