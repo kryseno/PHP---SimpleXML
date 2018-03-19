@@ -24,7 +24,7 @@
 include('request.php');
 ?>
         <h1>YouTube Channel: <a href='<?=$address?>'><?=$channel?></a></h1>
-        <div class="row">
+        <!-- <div class="row"> -->
 <?php
 for($i=0; $i<12; $i++){
     include('template.php');
@@ -37,7 +37,22 @@ for($i=0; $i<12; $i++){
         </div> -->
 
         <!-- USING BOOTSTRAP TABLES -->
-    
+        <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"><? echo $i + 1?></th>
+                <td><?=$title?></td>
+                <td><?=$description?></td>
+            </tr>
+        </tbody>
+        </table>
 <?php
 }
 ?>
