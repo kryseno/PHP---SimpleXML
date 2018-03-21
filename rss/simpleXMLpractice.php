@@ -20,21 +20,16 @@
 </head>
 <body>
     <div class="container">
-<?php
-include('request.php');
-?>
+        <?php
+        include('request.php');
+        ?>
+
         <h1>YouTube Channel: <a href='<?=$address?>'><?=$channel?></a></h1>
-        <!-- <div class="row"> -->
-<?php
-for($i=0; $i<12; $i++){
-    include('template.php');
-?>
-        <!-- USING BOOTSTRAP CLASSES -->
-        <!-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 videos">
-            <h3><?=$title?></h3>
-            <br><iframe width='540' height='295' src='https://www.youtube.com/embed/<?=$videoId?>' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>
-            <br><span id="description"><?=$description?></span>
-        </div> -->
+
+        <?php
+        for($i=0; $i<12; $i++){
+            include('template.php');
+        ?>
 
         <!-- USING BOOTSTRAP TABLES -->
         <table class="table table-dark">
@@ -53,9 +48,10 @@ for($i=0; $i<12; $i++){
             </tr>
         </tbody>
         </table>
-<?php
-}
-?>
+        
+        <?php
+        }
+        ?>
         </div>
     </div>
 </body>
