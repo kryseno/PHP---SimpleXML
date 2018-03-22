@@ -16,28 +16,24 @@ $xml = <<<XML
 XML;
 
 $xml_object = new SimpleXMLElement($xml);
-echo $xml_object->asXML('createdXML.xml');
+$xmlFile = $xml_object->asXML('createdXML.xml');
 
-// $character = $xml_object->xpath('/content/characters/name');
-// $count = count($character);
+$character = $xml_object->xpath('/content/characters/name');
+$count = count($character);
 
-// for($i=0; $i<$count; $i++) {
-//     echo 'Character Name: ' . $character[$i] ?><br><?php;
-// }
+for($i=0; $i<$count; $i++) {
+    echo 'Character Name: ' . $character[$i] ?><br><?php;
+}
 
 
-
-// $hash = hash('md5', 'marvel');
-// $url = "https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=6e9af333fe9d6fd94c038d17f4bea675&hash=" . $hash;
+//cURL
+// $url = "";
 
 // $ch = curl_init();
-
 // curl_setopt($ch, CURLOPT_URL, $url);
 // curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
+// curl_setopt($ch, CURLOPT_POST, 1);
+// curl_setopt($ch, CURLOPT_POSTFIELDS, $xmlFile);
 // $result = curl_exec($ch);
-
 // curl_close($ch);
-
-// echo $result;
 ?>
