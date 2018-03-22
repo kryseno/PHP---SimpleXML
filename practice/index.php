@@ -1,7 +1,7 @@
 <?php
 
 //Create XML Data
-$xml_string = <<<XML
+$xml = <<<XML
 <content>
     <title>The Office Characters</title>
     <characters>
@@ -15,13 +15,15 @@ $xml_string = <<<XML
 </content>
 XML;
 
-$xml = new SimpleXMLElement($xml_string);
-$character = $xml->xpath('/content/characters/name');
-$count = count($character);
+$xml_object = new SimpleXMLElement($xml);
+echo $xml_object->asXML('createdXML.xml');
 
-for($i=0; $i<$count; $i++) {
-    echo 'Character Name: ' . $character[$i] ?><br><?php;
-}
+// $character = $xml_object->xpath('/content/characters/name');
+// $count = count($character);
+
+// for($i=0; $i<$count; $i++) {
+//     echo 'Character Name: ' . $character[$i] ?><br><?php;
+// }
 
 
 

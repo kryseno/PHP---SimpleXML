@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<content>
+    <title>The Office Characters</title>
+    <characters>
+        <name>Michael Scott</name>
+            <title>Regional Manager</title>
+        <name>Dwight Shrute</name>
+            <title>Assistant to the Regional Manager</title>
+        <name>Toby Flenderson</name>
+            <title>HR Rep</title>
+    </characters>
+</content>
