@@ -6,13 +6,22 @@ $xml_string = <<<XML
     <title>The Office Characters</title>
     <characters>
         <name>Michael Scott</name>
+            <title>Regional Manager</title>
         <name>Dwight Shrute</name>
+            <title>Assistant to the Regional Manager</title>
+        <name>Toby Flenderson</name>
+            <title>HR Rep</title>
     </characters>
 </content>
 XML;
 
 $xml = new SimpleXMLElement($xml_string);
-echo $xml->asXML();
+$character = $xml->xpath('/content/characters/name');
+$count = count($character);
+
+for($i=0; $i<$count; $i++) {
+    echo 'Character Name: ' . $character[$i] ?><br><?php;
+}
 
 
 
